@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JV Chat</title>
+  <!--Link to CSS -->
+  <link href="../static/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="header">
+    <center>
+      <span style="color:tomato;">J</span><span style="color:dodgerblue;">V</span> chat
+    </center>
+  </div>
+
+  <div class="container">
+
+    <center>
+
+      <form class="form" action="{{url_for('chat')}}" method="POST">
+        <p class="heading">Join Room</p>
+        <br />
+        <input class="input" type="text" id="username" name="username" placeholder="Username" required autofocus><br>
+        <input class="input" type="text" id="room" name="room" placeholder="Room" required><br>
+        <button class="button" value="submit">Join</button>
+      </form>
+
+    </center>
+
+  </div>
+
+</body>
+
+</html>

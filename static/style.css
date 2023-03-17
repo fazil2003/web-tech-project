@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins&display=swap');
+
+:root{
+  --color-one: #15202B;
+  --color-two: #3b4d5f;
+}
+
+html{
+  background: linear-gradient(to right,var(--color-one) 0%,var(--color-two)  100%);
+  color: #FFFFFF;
+}
+
+html, input, button{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.header{
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.container{
+  margin-top: 120px;
+}
+
+.form{
+  width: 40%;
+  padding: 20px;
+  border-radius: 20px;
+
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+  border: 2px solid #FFFFFF;
+  color: #15202B;
+}
+
+.form:hover{
+  box-shadow: 2px 5px 10px rgb(200, 200, 200);
+}
+
+.input{
+  width: 250px;
+  padding: 12.5px;
+  font-size: 18px;
+  margin-top: 10px;
+  background: rgb(210, 210, 210);
+  color: #15202B;
+  font-weight: 600;
+  border: 3px solid rgb(210, 210, 210);
+  border-radius: 100px;
+  outline: none;
+}
+
+.input::placeholder { 
+  color: #15202B;
+  opacity: 0.8; 
+  font-weight: 400;
+}
+
+.input:focus{
+  border-color: #15202B;
+}
+
+.button{
+  width: 280px;
+  padding: 12.5px;
+  font-size: 18px;
+  margin-top: 10px;
+  background: wheat;
+  color: #15202B;
+  font-weight: 600;
+  border: 3px solid wheat;
+  border-radius: 100px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover{
+  background-color: rgb(244, 178, 56);
+  border-color: rgb(244, 178, 56);
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.heading{
+  margin: 0;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+#chat{
+  width: 45%;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 20px;
+  border-radius: 15px;  
+  background: #3a4b5a;;
+}
+
+#chat::-webkit-scrollbar {
+  display: none;
+}
+
+.chat{
+  background: rgb(211, 255, 150);
+  text-align: left;
+  color: #15202B;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 5px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+.chatwindow{
+  position: absolute;
+	top:50;
+	bottom: 50;
+	left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  padding: 30px; 
+}
+h2{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
