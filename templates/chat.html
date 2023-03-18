@@ -32,7 +32,7 @@
                 socket.emit('left', {}, function() {
                     socket.disconnect();
                     // go back to the login page
-                    window.location.href = "{{ url_for('index') }}";
+                    window.location.href = "{{ url_for('home', username = username) }}";
                 });
             }
         </script>
@@ -42,7 +42,9 @@
     
     <div class="header">
         <center>
-            <span style="color:tomato;">J</span><span style="color:dodgerblue;">V</span> chat
+          <div class="header-logo">
+            <span style="color:tomato;">J</span><span style="color:dodgerblue;">V</span>Chat
+          </div>
         </center>
     </div>
     
@@ -54,13 +56,20 @@
 
             <div id="chat"></div><br />
 
-            <input class="input" type="text" id="text" size="60" placeholder="Enter your message here" />
-            <button type="button" id="send" class="button">SEND</button><br /><br />
-            <center><button class="button" onclick=leave_room()>Leave this Chat</button></center>
+            <div class="options-menu">
+                <input style="flex:2; margin: 5px;" class="input" type="text" id="text" size="60" placeholder="Enter your message here" autocomplete="off" />
+                <button style="flex:1; margin: 5px;" type="button" id="send" class="button">Send</button>
+                <button style="flex:1; margin: 5px;" class="button" onclick=leave_room()>Leave</button>
+            </div>
 
         </center>
 
     </div>    
 
   </body>
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
 </html>

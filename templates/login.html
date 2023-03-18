@@ -21,22 +21,20 @@
 
     <center>
 
-      <form class="form" action="{{url_for('chat')}}" method="POST">
+      <form class="form" action="{{url_for('validateLogin')}}" method="POST">
         <p class="heading">
-          <span class="small-text">Create or Join</span><br />Room
+          <span class="medium-text">Login</span>
         </p>
         <br />
         <img src="../static/chat.png" style="width: 100%; height: 150px; object-fit: contain;" />
         <br />
-        <input class="input" type="text" id="username" name="username" placeholder="Username" value="{{ username }}" required readonly style="display: none;"><br>
-        <input class="input" type="text" id="room" name="room" placeholder="Room" required autofocus autocomplete="off"><br>
-        <button class="button" value="submit">Join</button>
-        <a href="/history?username={{ username }}">
-          <div style="transform: scale(0.9);" class="button">View History</div>
-        </a>
+        <input class="input" type="text" id="username" name="username" placeholder="Username or Email" required autofocus autocomplete="off"><br>
+        <input class="input" type="password" id="password" name="password" placeholder="Password" required><br>
+        <button class="button" value="submit">Login</button>
+        <br /><br />
+        Don't have an account? <a href="/register">Register</a>
         <br /><br />
       </form>
-
 
     </center>
 

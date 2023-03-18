@@ -7,12 +7,22 @@
 
 html{
   background: linear-gradient(to right,var(--color-one) 0%,var(--color-two)  100%);
+  /* background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100%; */
   color: #FFFFFF;
 }
 
 html, input, button{
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: dodgerblue;
+  font-weight: 600;
 }
 
 .header{
@@ -23,24 +33,54 @@ html, input, button{
   width: 100%;
   height: 100px;
   padding: 10px;
-  font-size: 50px;
   font-weight: 600;
+}
+
+.header-logo{
+  padding: 5px 30px 5px 30px;
+  color: black;
+  font-size: 40px;
+  width: 200px;
+
+  background: linear-gradient(to right, white, white) padding-box,
+              linear-gradient(to right, #fa709a, #fee140) border-box;
+  border-radius: 10px 30px 10px 30px;
+  border: 3px solid transparent;
+
 }
 
 .container{
   margin-top: 120px;
+  padding-bottom: 50px;
 }
 
 .form{
-  width: 40%;
-  padding: 20px;
-  border-radius: 20px;
+  width: 30%;
+  padding: 0px;
+  
+  background: linear-gradient(to right, #fa709a, #fee140) padding-box,
+              linear-gradient(to right, #fa709a, #fee140) border-box;
+  border-radius: 20px 50px 20px 50px;
+  border: 10px solid transparent;
 
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-
-  border: 2px solid #FFFFFF;
   color: #15202B;
+}
+
+.listings{
+  width: 40%;
+  background: linear-gradient(to right, #fa709a, #fee140);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.listings .listing{
+  margin-top: 7.5px;
+  color: black;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
 }
 
 .form:hover{
@@ -52,11 +92,11 @@ html, input, button{
   padding: 12.5px;
   font-size: 18px;
   margin-top: 10px;
-  background: rgb(210, 210, 210);
+  background: white;
   color: #15202B;
   font-weight: 600;
   border: 3px solid rgb(210, 210, 210);
-  border-radius: 100px;
+  border-radius: 10px;
   outline: none;
 }
 
@@ -85,8 +125,9 @@ html, input, button{
 }
 
 .button:hover{
-  background-color: rgb(244, 178, 56);
-  border-color: rgb(244, 178, 56);
+  background-color: rgb(55, 194, 39);
+  border-color: white;
+  color: white;
   transform: scale(0.9);
   transition: all 0.3s ease;
 }
@@ -94,18 +135,22 @@ html, input, button{
 .heading{
   margin: 0;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 70px;
+  font-weight: 600;
 }
 
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
+.heading .small-text{
+  font-size: 30px;
+  font-weight: 400;
 }
-.form-signin .form-control:focus {
-  z-index: 2;
+
+.heading .medium-text{
+  font-size: 50px;
+}
+
+.options-menu{
+  display: flex;
+  width: 45%;
 }
 
 #chat{
@@ -114,7 +159,7 @@ html, input, button{
   overflow-y: scroll;
   padding: 20px;
   border-radius: 15px;  
-  background: #3a4b5a;;
+  background: white;
 }
 
 #chat::-webkit-scrollbar {
@@ -143,4 +188,81 @@ html, input, button{
 h2{
   text-align: center;
   font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .form{
+    width: 70%;
+  }
+
+  .listings{
+    width: 70%;
+  }
+
+  #chat{
+    width: 70%;
+  }
+
+  .options-menu{
+    width: 70%;
+  }
 }

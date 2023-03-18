@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JV Chat</title>
+  <!--Link to CSS -->
+  <link href="../static/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="header">
+    <center>
+      <div class="header-logo">
+        <span style="color:tomato;">J</span><span style="color:dodgerblue;">V</span>Chat
+      </div>
+    </center>
+  </div>
+
+  <div class="container">
+
+    <center>
+
+        <div class="listings">
+            <p class="heading">History</p><br />
+            {% for data in historyData %}
+            <div class="listing" style="display: flex">
+                <img src="../static/search.png" style="width: 20px; height: 20px; object-fit: contain; flex: 1" />
+                <p style="flex: 4; margin: 0;">{{ data[2] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+    </center>
+
+  </div>
+
+</body>
+
+
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+</html>
